@@ -4,6 +4,7 @@ const connectDB = require('./db/connect')
 const notFound = require('./middleware/notFound')
 const errorHandler = require('./middleware/errorHandler')
 const morgan = require('morgan')
+const authRouter = require('./routes/authRoutes')
 const app = express()
 
 const port = process.env.PORT || 5000
@@ -14,7 +15,7 @@ app.get('/',(req,res)=>
 {
     res.send("Calling get")
 });
-
+app.use('/api/v1/',authRouter)
 app.use(notFound)
 app.use(errorHandler)
 const start = async()=>{
