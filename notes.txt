@@ -1,5 +1,6 @@
 Error Handler is invoke from actual existing route
 morgan - logging tool
 For async await try catch is needed
-express-async-error take the function and wrap it with try catch  and return the function. If any error occurs next(err) will call from catch
+express-async-error take the async function and wrap it with try catch  and return the function. If any error occurs next(err) will call from catch
 first schema  then  model
+to parse the cookie need cookie-parser
